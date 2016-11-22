@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconWithTextView">
+        <attr name="Tab_Text" format="string"></attr>
+        <attr name="Tab_TextSize" format="dimension"></attr>
+        <attr name="Tab_TextColor" format="color"></attr>
+        <attr name="Tab_IconSrc" format="reference"></attr>
+    </declare-styleable>
+</resources>

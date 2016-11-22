@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.pingan.yourchats.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-</RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+        <com.pingan.yourchats.IconWithTextView
+            android:id="@+id/weixin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:Tab_Text="微信"
+            app:Tab_TextSize="16sp"
+            app:Tab_TextColor="@color/colorBlack"
+            app:Tab_IconSrc="@mipmap/tab_weixin_normal"/>
+        <com.pingan.yourchats.IconWithTextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:Tab_TextSize="16sp"
+            app:Tab_Text="好友"
+            app:Tab_TextColor="@color/colorBlack"
+            app:Tab_IconSrc="@mipmap/tab_address_normal"/>
+        <com.pingan.yourchats.IconWithTextView
+            android:id="@+id/find_frd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:Tab_Text="发现"
+            app:Tab_TextSize="16sp"
+            app:Tab_TextColor="@color/colorBlack"
+            app:Tab_IconSrc="@mipmap/tab_find_frd_normal"/>
+        <com.pingan.yourchats.IconWithTextView
+            android:id="@+id/setting"
+            app:Tab_Text="设置"
+            app:Tab_IconSrc="@mipmap/tab_settings_normal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:Tab_TextSize="16sp"
+            app:Tab_TextColor="@color/colorBlack"
+            />
+    </LinearLayout>
+
+</LinearLayout>
