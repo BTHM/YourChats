@@ -90,9 +90,18 @@ public class IconWithTextView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        mPaint.setColor(Color.GREEN);
         canvas.drawBitmap(mIconSrc, null, dstRect, mPaint);
 
+
+        //画文字
+        mPaint.setColor(Color.BLACK);
+        mPaint.setAlpha(255 - mAlpha);
+        canvas.drawText(mText,mTextX,mTextY,mPaint);
+
+        //画纯色的文字
+        mPaint.setColor(Color.GREEN);
+        mPaint.setAlpha(mAlpha);
         canvas.drawText(mText,mTextX,mTextY,mPaint);
     }
 
