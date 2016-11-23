@@ -14,6 +14,7 @@ import com.pingan.yourchats.fragment.AddressFragment;
 import com.pingan.yourchats.fragment.FindFrdFragment;
 import com.pingan.yourchats.fragment.SettingFragment;
 import com.pingan.yourchats.fragment.WeiXinFragment;
+import com.pingan.yourchats.widget.IconWithTextView;
 
 import java.util.ArrayList;
 import java.util.List;

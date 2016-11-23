@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.pingan.yourchats.R;
+import com.pingan.yourchats.adapter.EmotionVpAdapter;
 
 import butterknife.BindView;
 
@@ -36,7 +37,7 @@ public class ChatActivity extends BaseActivity {
 
     @Override
     protected void loadData() {
-       // emotionVp.setAdapter();
+        emotionVp.setAdapter(new EmotionVpAdapter());
     }
 
 }
