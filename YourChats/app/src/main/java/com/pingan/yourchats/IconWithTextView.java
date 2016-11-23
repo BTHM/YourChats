@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -32,6 +33,7 @@ public class IconWithTextView extends View {
     private int mTextX;
     private int mTextY;
     private String tag=IconWithTextView.class.getSimpleName();
+    private int mAlpha;
 
     public IconWithTextView(Context context) {
         this(context, null);
@@ -92,5 +94,16 @@ public class IconWithTextView extends View {
         canvas.drawBitmap(mIconSrc, null, dstRect, mPaint);
 
         canvas.drawText(mText,mTextX,mTextY,mPaint);
+    }
+
+
+    public void setIconTextAlpha(float alpha) {
+        this.mAlpha = (int) (alpha*255);
+        //重绘界面
+        if(Looper.getMainLooper() == Looper.myLooper()){
+            invalidate();
+        }else{
+            postInvalidate();
+        }
     }
 }
