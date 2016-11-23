@@ -104,6 +104,7 @@ public class IconWithTextView extends View {
             invalidate();
         }else{
             postInvalidate();
+            //
         }
     }
 }
