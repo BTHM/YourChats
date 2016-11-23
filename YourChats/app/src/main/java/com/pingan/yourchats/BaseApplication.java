@@ -17,7 +17,9 @@ public class BaseApplication extends Application {
                 if (mBaseApplication == null) {
                     mBaseApplication = new BaseApplication();
                 }
+                
                 return mBaseApplication;
+
             }
     }
 }
