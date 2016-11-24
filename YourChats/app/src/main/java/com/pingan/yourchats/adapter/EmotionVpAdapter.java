@@ -4,7 +4,8 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.pingan.yourchats.widget.EmotionGridView;
+import widget.EmotionGridView;
+
 
 /**
  * Author：liupeng on 2016/11/23 18:30
