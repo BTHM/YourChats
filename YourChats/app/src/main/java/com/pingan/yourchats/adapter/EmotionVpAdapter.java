@@ -15,7 +15,7 @@ public class EmotionVpAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return 5;
     }
 
     @Override
@@ -26,6 +26,8 @@ public class EmotionVpAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         EmotionGridView gridView = new EmotionGridView(container.getContext());
+        EmotionGridView.MyEmtionAdapter EmGvdapter = (EmotionGridView.MyEmtionAdapter)gridView.getAdapter();
+        EmGvdapter.setData(getCount(),position);
         container.addView(gridView);
         return gridView;
     }

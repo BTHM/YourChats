@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal">
-        <com.pingan.yourchats.widget.IconWithTextView
+        <widget.IconWithTextView
             android:id="@+id/weixin"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             app:Tab_TextSize="16sp"
             app:Tab_TextColor="@color/colorTabselect"
             app:Tab_IconSrc="@mipmap/tab_weixin_normal"/>
-        <com.pingan.yourchats.widget.IconWithTextView
+        <widget.IconWithTextView
             android:id="@+id/address"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -36,7 +36,7 @@
             app:Tab_Text="好友"
             app:Tab_TextColor="@color/colorTabselect"
             app:Tab_IconSrc="@mipmap/tab_address_normal"/>
-        <com.pingan.yourchats.widget.IconWithTextView
+        <widget.IconWithTextView
             android:id="@+id/find_frd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -45,7 +45,7 @@
             app:Tab_TextSize="16sp"
             app:Tab_TextColor="@color/colorTabselect"
             app:Tab_IconSrc="@mipmap/tab_find_frd_normal"/>
-        <com.pingan.yourchats.widget.IconWithTextView
+        <widget.IconWithTextView
             android:id="@+id/setting"
             app:Tab_Text="设置"
             app:Tab_IconSrc="@mipmap/tab_settings_normal"

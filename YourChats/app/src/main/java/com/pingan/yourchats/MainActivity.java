@@ -14,13 +14,13 @@ import com.pingan.yourchats.fragment.AddressFragment;
 import com.pingan.yourchats.fragment.FindFrdFragment;
 import com.pingan.yourchats.fragment.SettingFragment;
 import com.pingan.yourchats.fragment.WeiXinFragment;
-import com.pingan.yourchats.widget.IconWithTextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import widget.IconWithTextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
         }
         tabViewList.get(currentTab).setIconTextAlpha(1);
-        viewpager.setCurrentItem(currentTab);
+        viewpager.setCurrentItem(currentTab,false);
     }
 
 

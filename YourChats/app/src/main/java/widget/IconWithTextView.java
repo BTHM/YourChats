@@ -94,11 +94,13 @@ public class IconWithTextView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setColor(Color.BLACK);
+        mPaint.setAlpha(255);
         canvas.drawBitmap(mIconSrc, null, dstRect, mPaint);
+
 
         drawMaskBitmap(mAlpha);
         //将内存中的纯色图片画到控件上
+        mPaint.setAlpha(mAlpha);
         canvas.drawBitmap(maskBitmap, 0, 0, mPaint);
 
         //画文字
@@ -121,7 +123,7 @@ public class IconWithTextView extends View {
 
         Paint paint = new Paint();
         paint.setColor(Color.GREEN);
-        paint.setAlpha(alpha);
+        paint.setAlpha(255);
 
         //在该画布上 画一个纯色的矩形
         canvas.drawRect(dstRect, mPaint);

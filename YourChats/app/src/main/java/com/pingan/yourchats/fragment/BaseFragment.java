@@ -25,6 +25,7 @@ public abstract class BaseFragment extends Fragment implements LazyLoadView{
         View view =  inflater.inflate(setContentView(), container, false);
         mUnbinder = ButterKnife.bind(this, view);
         IsInitView = true;
+        isCanLoadData();
         return view;
     }
 
@@ -44,7 +45,6 @@ public abstract class BaseFragment extends Fragment implements LazyLoadView{
         if (!IsInitView) {
             return;
         }
-
         if (getUserVisibleHint()) {
             lazyLoad();
             isLoad = true;
